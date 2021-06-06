@@ -37,6 +37,7 @@ const StyledNav = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
 
   #logo {
     font-family: "Lobster", cursive;

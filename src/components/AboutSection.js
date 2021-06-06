@@ -1,5 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
+import { motion } from "framer-motion";
+
 import {
   StyledLayout,
   StyledDescription,
@@ -12,19 +14,19 @@ const AboutSection = () => {
   return (
     <StyledLayout>
       <StyledDescription>
-        <div className="about__description--title">
+        <motion.div className="about__description--title">
           <StyledHide>
-            <h2>We work to make</h2>
+            <motion.h2>We work to make</motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>
+            <motion.h2>
               you <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>true.</h2>
+            <motion.h2>true.</motion.h2>
           </StyledHide>
-        </div>
+        </motion.div>
         <p>
           Contact us for any photography or videography that you have. We have
           professionals with amazing skills to help you achieve it
