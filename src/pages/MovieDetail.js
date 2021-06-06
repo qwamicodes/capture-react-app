@@ -10,7 +10,7 @@ import { MovieState } from "../movieState";
 const MovieDetail = () => {
   const url = useHistory().location.pathname;
 
-  const [Movies, setMovies] = useState(MovieState);
+  const [Movies] = useState(MovieState);
   const [Movie, setMovie] = useState(null);
 
   useEffect(() => {
