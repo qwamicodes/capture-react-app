@@ -3,7 +3,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
-import { pageAnimation } from "../animation";
+import {
+  pageAnimation,
+  fade,
+  photoAnim,
+  lineAnim,
+  sliderContainer,
+  slider,
+} from "../animation";
 
 import athlete from "../img/athlete-small.png";
 import theracer from "../img/theracer-small.png";
@@ -18,11 +25,20 @@ const OurWork = () => {
       animate="show"
       style={{ background: "#fff" }}
     >
+      <motion.div variants={sliderContainer}>
+        <Frame1 variants={slider}></Frame1>
+        <Frame2 variants={slider}></Frame2>
+        <Frame3 variants={slider}></Frame3>
+        <Frame4 variants={slider}></Frame4>
+      </motion.div>
+
       <StyledMovie>
-        <h2>The Athlete</h2>
-        <div className="line"></div>
+        <motion.h2 variants={fade}>The Athlete</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-athlete">
-          <img src={athlete} alt="The Athlete" />
+          <Hide>
+            <motion.img variants={photoAnim} src={athlete} alt="The Athlete" />
+          </Hide>
         </Link>
       </StyledMovie>
       <StyledMovie>
@@ -58,7 +74,7 @@ const StyledMovie = styled.div`
   padding-bottom: 10rem;
 
   .line {
-    background: #ccc;
+    background: #23d997;
     height: 0.5rem;
     margin-bottom: 3rem;
   }
@@ -68,6 +84,32 @@ const StyledMovie = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
+`;
+
+const Frame1 = styled(motion.div)`
+  background: #8ee223;
+  position: fixed;
+  top: 10%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+`;
+
+const Frame2 = styled(Frame1)`
+  background: #3ae;
+`;
+
+const Frame3 = styled(Frame1)`
+  background: #31d;
+`;
+
+const Frame4 = styled(Frame1)`
+  background: #e23;
 `;
 
 export default OurWork;

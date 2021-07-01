@@ -6,6 +6,7 @@ import { pageAnimation } from "../animation";
 import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection";
 import FaqSection from "../components/FaqSection";
+import Wave from "../components/Wave";
 
 const AboutUs = () => {
   return (
@@ -15,6 +16,7 @@ const AboutUs = () => {
       initial="hidden"
       animate="show"
     >
+      <Wave />
       <AboutSection />
       <ServicesSection />
       <FaqSection />

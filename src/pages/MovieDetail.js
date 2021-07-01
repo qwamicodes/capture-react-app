@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { v4 as uuid } from "uuid";
+
 import styled from "styled-components";
 
 import { motion } from "framer-motion";
@@ -9,6 +11,7 @@ import { MovieState } from "../movieState";
 
 const MovieDetail = () => {
   const url = useHistory().location.pathname;
+  console.log(useHistory());
 
   const [Movies] = useState(MovieState);
   const [Movie, setMovie] = useState(null);
@@ -33,7 +36,11 @@ const MovieDetail = () => {
           </StyledHeadline>
           <StyledAwards>
             {Movie.awards.map((award) => (
-              <Award title={award.title} description={award.description} />
+              <Award
+                title={award.title}
+                description={award.description}
+                key={uuid()}
+              />
             ))}
           </StyledAwards>
           <StyledImageDisplay>
