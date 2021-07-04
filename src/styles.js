@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const StyledLayout = styled.section`
+import { motion } from "framer-motion";
+
+export const StyledLayout = styled(motion.section)`
   min-height: 90vh;
   padding: 5rem 10rem;
   color: #fff;

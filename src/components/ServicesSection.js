@@ -9,9 +9,19 @@ import diaphragm from "../img/diaphragm.svg";
 import teamwork from "../img/teamwork.svg";
 import money from "../img/money.svg";
 
+import { useScroll } from "./useScroll";
+import { fade } from "../animation";
+
 const ServiceSection = () => {
+  const [element, controls] = useScroll();
+
   return (
-    <StyledServicesLayout>
+    <StyledServicesLayout
+      variants={fade}
+      initial="hidden"
+      animate={controls}
+      ref={element}
+    >
       <StyledDescription>
         <h2>
           High <span>quality</span> services
