@@ -12,6 +12,7 @@ import {
   slider,
 } from "../animation";
 import { useScroll } from "../components/useScroll";
+import ScrollTop from "../components/ScrollTop";
 
 import athlete from "../img/athlete-small.png";
 import theracer from "../img/theracer-small.png";
@@ -81,6 +82,7 @@ const OurWork = () => {
           <img src={goodtimes} alt="Good Times" />
         </Link>
       </StyledMovie>
+      <ScrollTop />
     </StyledWork>
   );
 };

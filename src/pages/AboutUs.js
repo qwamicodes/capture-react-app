@@ -2,6 +2,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
+import ScrollTop from "../components/ScrollTop";
 
 import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection";
@@ -20,6 +21,7 @@ const AboutUs = () => {
       <AboutSection />
       <ServicesSection />
       <FaqSection />
+      <ScrollTop />
     </motion.div>
   );
 };
